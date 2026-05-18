@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is a small Next.js app for experimenting with ROT (rotation) ciphers. It provides two distinct user flows:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Normal**: A page that applies a standard ROT-N cipher. The user selects a rotation value (N) and the app encodes/decodes text accordingly.
+- **Enigma**: A page that applies a custom, personal algorithm (the author's Enigma-style algorithm) instead of the standard ROT-N behavior.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Normal page**: implemented as `app/pages/normal.jsx` — lets users pick a ROT value and process text using the conventional ROT-N algorithm.
+- **Enigma page**: implemented as `app/pages/Enigma.jsx` — uses a bespoke algorithm (the project's personal Enigma algorithm) to transform text.
 
-## Learn More
+## Components
 
-To learn more about Next.js, take a look at the following resources:
+The app breaks UI into small components (found under `app/components/`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `button.jsx`: shared button component used across the app.
+- `input.jsx`: text input component for entering plaintext or ciphertext.
+- `output.jsx`: displays the transformed text result.
+- `rot_selector.jsx`: control for selecting the ROT-N value (used on the Normal page).
+- `footer.jsx`: page footer used site-wide.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
