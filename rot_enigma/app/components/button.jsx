@@ -1,5 +1,7 @@
 export function button () {
  return(
-    <button className="btn">Encrypt</button>
+    <div className="button-container">
+        <button className="encrypt-button">Encrypt</button>
+    </div>
  )   
 }
