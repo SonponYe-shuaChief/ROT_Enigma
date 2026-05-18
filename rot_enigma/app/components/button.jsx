@@ -5,3 +5,5 @@ export function button () {
     </div>
  )   
 }
+
+export default button;
